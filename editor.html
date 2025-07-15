@@ -5,51 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lua Editor</title>
   <link rel="stylesheet" href="styles/main.css" />
-  <style>
-    #lessonContainer {
-      position: fixed;
-      left: 20px;
-      top: 100px;
-      width: 300px;
-      background: #222;
-      color: #eee;
-      padding: 15px;
-      border-radius: 8px;
-      font-family: monospace;
-      box-shadow: 0 0 10px #000;
-      z-index: 1000;
-    }
-    #lessonContainer textarea {
-      width: 100%;
-      font-family: monospace;
-      margin-top: 10px;
-      resize: vertical;
-      min-height: 100px;
-      background: #333;
-      color: #eee;
-      border: none;
-      border-radius: 4px;
-      padding: 8px;
-    }
-    #lessonContainer button {
-      margin-top: 10px;
-      width: 100%;
-      background: #f44336;
-      border: none;
-      padding: 10px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    #roastMessage {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #f44336;
-      min-height: 20px;
-      user-select: none;
-    }
-  </style>
 </head>
 <body class="light">
   <header>
@@ -64,15 +19,16 @@
       <pre id="output"></pre>
     </div>
 
-    <div id="lessonContainer">
-      <div id="instructionBox"></div>
-      <textarea id="codeInput" spellcheck="false" placeholder="Write your answer here..."></textarea>
-      <button id="checkAnswerBtn">Check Answer</button>
-      <div id="roastMessage"></div>
-    </div>
+    <!-- Lesson instructions & answer input -->
+    <div id="instructionBox" style="position: fixed; left: 20px; top: 100px; width: 300px; background: #222; color: #eee; padding: 15px; border-radius: 8px; font-family: monospace;"></div>
+    <textarea id="codeInput" rows="10" cols="50" style="font-family: monospace; margin-top: 10px;"></textarea>
+    <br/>
+    <button id="checkAnswerBtn">Check Answer</button>
+    <div id="roastMessage" style="color: #f44336; font-weight: bold; margin-top: 10px;"></div>
   </main>
 
   <script src="https://unpkg.com/fengari-web@0.1.4/dist/fengari-web.js"></script>
   <script src="scripts/editor.js"></script>
+  <script src="scripts/lesson.js"></script> <!-- Your roasting and lessons script -->
 </body>
 </html>
