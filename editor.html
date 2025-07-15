@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lua Editor</title>
   <link rel="stylesheet" href="styles/main.css" />
 </head>
@@ -13,19 +13,18 @@
   </header>
   <main>
     <div id="editorContainer">
-      <textarea id="editor" spellcheck="false">for i = 1, 5 do
-  print("Count:", i)
-end</textarea>
+      <textarea id="editor" spellcheck="false">print("Hello, Lua!")\nfor i = 1, 5 do\n  print("Count:", i)\nend</textarea>
       <button id="runBtn">Run Code</button>
       <div id="status"></div>
       <pre id="output"></pre>
     </div>
 
-    <div id="instructionBox" style="position: fixed; left: 20px; top: 100px; width: 300px; background: #222; color: #eee; padding: 15px; border-radius: 8px; font-family: monospace;"></div>
-    <textarea id="codeInput" rows="10" cols="50" style="font-family: monospace; margin-top: 10px;"></textarea>
-    <br/>
-    <button>Check Answer</button>
-    <div id="roastMessage" style="color: #f44336; font-weight: bold; margin-top: 10px;"></div>
+    <div id="lessonPanel">
+      <div id="instructionBox"></div>
+      <textarea id="codeInput" spellcheck="false" placeholder="Type your answer here..."></textarea>
+      <button id="checkBtn">Check Answer</button>
+      <div id="roastMessage"></div>
+    </div>
   </main>
 </body>
 </html>
